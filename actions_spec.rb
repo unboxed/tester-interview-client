@@ -1,16 +1,4 @@
-require "json"
-
-require "capybara"
-require "capybara/dsl"
-require "capybara/webkit"
-
-require "rspec"
-
-Capybara.configure do |config|
-  config.run_server = false
-  config.default_driver = :webkit
-  config.app_host = ENV["ACTIONS_SERVER_URL"]
-end
+require "./spec_helper"
 
 RSpec.describe "fibonacci action" do
   include Capybara::DSL
